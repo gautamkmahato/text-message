@@ -37,20 +37,6 @@ input {
     outline: none;
 }
 
-button {
-    cursor: pointer;
-    padding: 12px;
-    background: #7C5CBF;
-    border: none;
-    color: white;
-    font-size: 16px;
-    transition: background .3s ease;
-}
-
-button:hover {
-    background: #6b47b8;
-}
-
 button:disabled {
     cursor: default;
     background: #7c5cbf94;
@@ -74,9 +60,7 @@ button:disabled {
     width: 250px;
 }
 
-.centered-form button {
-    width: 100%;
-}
+
 
 .centered-form input {
     margin-bottom: 16px;
@@ -149,31 +133,43 @@ button:disabled {
 }
 
 /* Message Composition Styles */
+.column {
+    float: left;
+    padding: 5px;
+  }
 
-.compose {
-    display: flex;
-    flex-shrink: 0;
+
+.compose {   
     margin-top: 16px;
-    padding: 24px;
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .compose form {
-    display: flex;
-    flex-grow: 1;
     margin-right: 16px;
 }
 
 .compose input {
     border: 2px solid #dfdfdf;
     border-radius: 10px;
-    width: 100%;
+    width: 80%;
     padding: 12px;
     margin: 0 16px 0 0;
-    flex-grow: 1;
 }
 
-.compose button {
+#send-btn {
     font-size: 14px;
+    padding: 6px;
+    margin-top: 4px;
+    margin-right: 20px;
+    width: 5%;
+    transition: background .3s ease;
+    background-color: #1D1F26;
+    border: none;
+    color: white;
+}
+#send-btn:hover{
+    background-color: #39425e;
 }
 
 /* Chat Sidebar Styles */
@@ -232,5 +228,82 @@ button:disabled {
     border-radius: 8px;
 }
 #send-location{
+    width: 11%;
+    padding: 11px;
+    background-color: #1D1F26;
+    color: white;
     border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    margin-top: 4px;
+    transition: background .3s ease;
 }
+#send-location:hover{
+    background-color: #2c344d
+}
+
+/*---------- side bar -------------------*/
+
+  
+.sidebar {
+    height: 93vh;
+    color: white;
+    background: #333744;
+    width: 225px;
+    overflow-y: scroll
+  }
+
+
+
+  @media screen and (max-width: 500px) {
+    .column {
+      width: 100%;
+    }
+ 
+    
+    
+    .compose {   
+        margin-top: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .compose form {
+        margin-right: 16px;
+    }
+    
+    .compose input {
+        border: 2px solid #dfdfdf;
+        border-radius: 10px;
+        width: 100%;
+        padding: 12px;
+    }
+    
+    #send-btn {
+        font-size: 14px;
+        padding: 6px;
+        margin-top: 4px;
+        margin-right: 10px;
+        width: 30%;
+        transition: background .3s ease;
+        background-color: #1D1F26;
+        border: none;
+        color: white;
+    }
+    #send-btn:hover{
+        background-color: #39425e;
+    }
+    #send-location{
+        width: 60%;
+        padding: 11px;
+        background-color: #1D1F26;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        font-size: 14px;
+        margin-top: 4px;
+        transition: background .3s ease;
+    }
+    #send-location:hover{
+        background-color: #2c344d
+    }
+  }

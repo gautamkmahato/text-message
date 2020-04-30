@@ -6,6 +6,7 @@
     <title>Chat Webapp</title>
     <link rel="icon" href="/img/favicon.png">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -13,17 +14,19 @@
         <p class="nav-heading">Chat Webapp</p>
     </div>
     <div class="chat">
-        <div id="sidebar" class="chat__sidebar"></div>
+        <div id="sidebar" class="sidebar"></div>
 
-        <div class="chat__main">
+        <div class="chat__main" id="content">
             <!--  -->
             <div id="messages" class="chat__messages"></div>
+            
             <div class="compose">
                 <form id="message-form">
-                    <input type="text" id="message" placeholder="message..." required>
-                    <button type="submit" id="send-btn">send</button>
+                    <input type="text" class="column" id="message" placeholder="message..." required>
+                    <button style="font-size:24px" type="submit" class="column" id="send-btn"><i class="fa fa-send-o"></i></button>
+                    
                 </form>
-                <button id="send-location">Send Location</button>    
+                <button class="column" id="send-location">Send Location</button>    
             </div>   
         </div>
     </div>
